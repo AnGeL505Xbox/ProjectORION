@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(derive(#58D3F7,100%), #58D3F7);" stylesheets="@../Others/main.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ORION.MenuScreen.Menu">
+   <children>
+      <Label layoutX="168.0" layoutY="22.0" prefHeight="40.0" prefWidth="251.0" text="Diagnostico Medico">
+         <font>
+            <Font name="System Italic" size="28.0" />
+         </font>
+      </Label>
+      <Button layoutX="34.0" layoutY="161.0" mnemonicParsing="false" onAction="#btTools" prefHeight="39.0" prefWidth="221.0" text="IMC">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="34.0" layoutY="213.0" mnemonicParsing="false" onAction="#btDiagnostic" prefHeight="39.0" prefWidth="221.0" text="Diagnostico Medico">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="482.0" layoutY="318.0" mnemonicParsing="false" onAction="#bntOut">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" x="25.0" y="25.0">
+               <image>
+                  <Image url="@../img/out.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

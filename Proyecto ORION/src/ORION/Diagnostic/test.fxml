@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(derive(#58D3F7,100%), #58D3F7);" xmlns="http://javafx.com/javafx/8.0.261" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ORION.Diagnostic.Test">
+   <children>
+      <CheckBox fx:id="chkBo1" layoutX="26.0" layoutY="29.0" mnemonicParsing="false" text="Dolor/Irritacion en los ojos" />
+      <CheckBox fx:id="chkBo2" layoutX="26.0" layoutY="54.0" mnemonicParsing="false" text="Lagrimeo" />
+      <CheckBox fx:id="chkBo3" layoutX="26.0" layoutY="80.0" mnemonicParsing="false" text="Pestañeo excesivo o prolongado" />
+      <CheckBox fx:id="chkBo4" layoutX="26.0" layoutY="106.0" mnemonicParsing="false" text="Vision Borrosa" />
+      <CheckBox fx:id="chkBo5" layoutX="26.0" layoutY="132.0" mnemonicParsing="false" text="Dolores de cabeza" />
+      <CheckBox fx:id="chkBo6" layoutX="26.0" layoutY="158.0" mnemonicParsing="false" text="Deseo Inconrolable por Comer" />
+      <CheckBox fx:id="chkBo7" layoutX="26.0" layoutY="184.0" mnemonicParsing="false" text="Probocarse Vomito" />
+      <CheckBox fx:id="chkBo8" layoutX="26.0" layoutY="210.0" mnemonicParsing="false" text="Miedo a Engordar" />
+      <CheckBox fx:id="chkBo9" layoutX="26.0" layoutY="237.0" mnemonicParsing="false" text="Estreñimiento" />
+      <Button layoutX="382.0" layoutY="335.0" mnemonicParsing="false" onAction="#btnResult" text="Realizar Diagnostico">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <CheckBox fx:id="chkBo10" layoutX="26.0" layoutY="263.0" mnemonicParsing="false" text="Deseo Inconrolable por Comer" />
+      <CheckBox fx:id="chkBo11" layoutX="26.0" layoutY="289.0" mnemonicParsing="false" text="Probocarse Vomito" />
+      <CheckBox fx:id="chkBo12" layoutX="26.0" layoutY="315.0" mnemonicParsing="false" text="Miedo a Engordar" />
+      <CheckBox fx:id="chkBo13" layoutX="26.0" layoutY="342.0" mnemonicParsing="false" text="Estreñimiento" />
+   </children>
+</AnchorPane>
