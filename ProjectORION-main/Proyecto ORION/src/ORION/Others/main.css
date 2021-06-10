@@ -1,0 +1,10 @@
+Button {
+    -fx-background-color:  #c5d5ff;
+    -fx-border-radius: 10px;
+}
+TextField {
+    -fx-background-color: ghostwhite;
+}
+PasswordField {
+    -fx-background-color: ghostwhite;
+}
