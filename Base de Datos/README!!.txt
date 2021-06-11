@@ -1,0 +1,1 @@
+Esta carpeta contiene la base de datos que se necesita para este programa, se puede pegar esta carpeta en C:\xampp\mysql\data\
