@@ -13,7 +13,7 @@ public class Conections {
             conexion = DriverManager.getConnection("jdbc:mysql://"+server+":3306/"+bd+"?useUnicode=true&useJDBCCompilantTimeZoneShift=useLegacyDatetimeCode&serverTimeZone=UTC",user,password);
             System.out.println("Ya estas conectado");
         }catch (Exception e){
-            System.out.println("Imposible conectar con el servidor"+e.getMessage());
+            System.out.println("Imposible conectar con el servidor "+e.getMessage());
         }
     }
     public ResultSet consultar (String sql){

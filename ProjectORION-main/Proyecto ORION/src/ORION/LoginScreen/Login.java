@@ -23,6 +23,7 @@ import java.sql.SQLException;
 public class Login{
     static String userReg, passReg, userLog, passLog;
     static int idPacient=0;
+    static int regCount, logCount;
     private Conections conection;
 
     @FXML TextField txtNumberControl ,txtPassword, txUserName, txPassWord;
@@ -82,6 +83,8 @@ public class Login{
         if (resultSet!=null){
             int timer=0;
             while (resultSet.next()){
+                logCount = resultSet.getInt("idUser");
+                System.out.println(logCount);
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setContentText("Bienvenido "+userLog);
                 alert.showAndWait();
@@ -111,13 +114,20 @@ public class Login{
         paneRegister.setVisible(true);
     }
 
-    public void btRegistrar(ActionEvent event){
+    public void btRegistrar(ActionEvent event) throws SQLException {
         if (!txUserName.getText().trim().equals("")&& !txPassWord.getText().trim().equals("")){
             String UsN=txUserName.getText();
             String Psd=txPassWord.getText();
-            conection.insmodel("INSERT INTO users (username, password)VALUES (´"+UsN+"´,´"+Psd+"´)");
 
-            System.out.println("INSERT INTO users (username, password)VALUES (´"+UsN+"´,´"+Psd+"´)");
+            ResultSet resultSet = conection.consultar("SELECT * FROM users ORDER BY idUser DESC");
+
+            if(resultSet.next()) {
+                regCount = resultSet.getInt("idUser") + 1;
+                conection.insmodel("INSERT INTO pacient(idPacient,name,lastname,lastname2,age,CURP,weight,height,idSick) VALUES ('"+ regCount +"','Nul','Nul','Null',10,'Null',0,0,1)");
+                conection.insmodel("INSERT INTO users(idUser,username, password, idPacient) VALUES ('"+ regCount +"','"+UsN+"','"+Psd+"','"+ regCount +"')");
+            }
+
+            System.out.println("INSERT INTO users(username, password) VALUES ('"+UsN+"','"+Psd+"','"+ regCount +"')");
 
             Alert alert=new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Alerta");
@@ -161,7 +171,7 @@ public class Login{
     //#region Getters & Setters
     public String getUserName() { return userReg; }
     public String getPassWord() { return passReg; }
-    public static String getUsuario() { return userLog; }
-    public static String getPassword() { return passLog; }
+    public int getCount() { return regCount; }
+    public int getLogCount() { return logCount; }
     //#endregion
 }

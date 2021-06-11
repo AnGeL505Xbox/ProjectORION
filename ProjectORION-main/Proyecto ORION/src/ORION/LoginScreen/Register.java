@@ -20,14 +20,19 @@ public class Register{
     @FXML CheckBox checkPrivacy;
 
     static Login login = new Login();
-    static LinkedList<User> listUser= new LinkedList<>();
 
+    //#region Descontinuado
+    static LinkedList<User> listUser= new LinkedList<>();
     User user = new User("","", login.getPassWord(), login.getUserName(),0,0,0,null);
+    //#endregion
+
     Conections conection;
     @FXML protected void initialize(){
         conection=new Conections();
     }
+
     public void btFinish(ActionEvent event){
+        int count = login.getCount();
         if (!txName.getText().trim().equals("") && !txAge.getText().trim().equals("")&& !txAP.getText().trim().equals("") && !txAM.getText().trim().equals("")
                 && !txPeso.getText().trim().equals("")&& !txAltura.getText().trim().equals("")&& !txCURP.getText().trim().equals("")){
             String Nm=txName.getText();
@@ -37,37 +42,23 @@ public class Register{
             String Pso=txPeso.getText();
             String Alt=txAltura.getText();
             String Curp=txCURP.getText();
-            conection.insmodel("INSERT INTO pacient (name, lastname, lastname2, age, CURP, weight, height)VALUES (´"+Nm+"´,´"+Ap+"´,´"+Am+"´,´"+Ag+"´,´"+Ap+
-                    "´,´"+Curp+"´,´"+Pso+"´,´"+Alt+"´)");
+            conection.insmodel("UPDATE pacient SET name='"+Nm+"' ,lastname= '"+Ap+"' ,lastname2= '"+Ap+"' ,age= '"+Ag+"' ,CURP= '"+Curp+"' ,weight= '"+Pso+"', height= '"+Alt+"' WHERE idPacient = '"+count+"'");
 
-             txName.setText("");
-             txAge.setText("");
-             txAP.setText("");
-             txAM.setText("");
-             txPeso.setText("");
-             txAltura.setText("");
-             txCURP.setText("");
+            txName.setText("");
+            txAge.setText("");
+            txAP.setText("");
+            txAM.setText("");
+            txPeso.setText("");
+            txAltura.setText("");
+            txCURP.setText("");
 
-            Alert alert=new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Alerta");
-            alert.setContentText("Registro insertado correctamente");
-            alert.show();
-
+            alert("Datos actualizados","Se han llenado los datos en tu perfil","INFO");
         }else{
-            Alert alert=new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Error en los datos");
-            alert.setContentText("Favor de llenar todos los datos");
-            alert.show();
+            alert("Error en los datos","Favor de llenar todos los datos","ERROR");
         }
-        if(checkPrivacy.isSelected()) {
-            this.user.setName(txName.getText() + " " + txAP.getText() + " " + txAM.getText());
-            this.user.setCURP(txCURP.getText());
-            this.user.setAge(Integer.parseInt(txAge.getText()));
-            this.user.setHeight(Double.parseDouble(txAltura.getText()));
-            this.user.setWeigth(Double.parseDouble(txPeso.getText()));
-            listUser.clear(); //Esto sirve para eliminar el admin y posteriormente agregarlo
-            listUser.add(this.user);
-
+        if(!checkPrivacy.isSelected()) {
+            alert("Error","Favor de ver las politicas de privacidad","ERROR");
+        } else {
             try {
                 Parent root = FXMLLoader.load(getClass().getResource("../LoginScreen/login.fxml"));
                 Scene scene=new Scene(root);
@@ -76,5 +67,20 @@ public class Register{
             } catch (IOException e) { e.printStackTrace(); }
         }
     }
+    public void alert(String a,String b, String type){
+
+        if (type.equals("ERROR")){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle(a);
+            alert.setContentText(b);
+            alert.show();
+        } else if (type.equals("INFO")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle(a);
+            alert.setContentText(b);
+            alert.show();
+        }
+    }
+
     public static LinkedList<User> getListUser() { return listUser; }
 }
