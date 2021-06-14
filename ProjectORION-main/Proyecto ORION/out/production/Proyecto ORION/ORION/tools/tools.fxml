@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -85,6 +86,154 @@
                   </VBox>
                </content>
           </Tab>
+            <Tab text="User">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <TextField fx:id="txNName" prefHeight="25.0" prefWidth="538.0" promptText="Luis" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="lbName" text="Nombre:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="179.0" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <TextField fx:id="txNLName" prefHeight="25.0" prefWidth="538.0" promptText="Marquez" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="lbLName" text="Apellido P:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="197.0" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <TextField fx:id="txNLName2" prefHeight="25.0" prefWidth="538.0" promptText="Perez" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="lbLName2" text="Apellido M:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="214.0" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <TextField fx:id="txNAge" prefHeight="25.0" prefWidth="538.0" promptText="44" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="lbAge" text="Edad:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="232.0" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <TextField fx:id="txNHeight" prefHeight="25.0" prefWidth="538.0" promptText="1.6 (Metros)" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="lbHeight" text="Altura:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="249.0" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <TextField fx:id="txNWeight" prefHeight="25.0" prefWidth="538.0" promptText="66.5 (Kg)" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="lbWeight" text="Peso:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="267.0" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <TextField fx:id="txNCURP" prefHeight="25.0" prefWidth="538.0" promptText="34jo123jlsdj1234" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="lbCURP" text="CURP:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="284.0" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <TextField fx:id="txNUser" prefHeight="25.0" prefWidth="538.0" promptText="Lolgamer2000" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="lbUser" text="Username:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="302.0" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <TextField fx:id="txNPassword" prefHeight="25.0" prefWidth="538.0" promptText="********" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Label fx:id="lbPassword" text="Password:" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="307.0" prefHeight="35.0" prefWidth="910.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#btChange" text="Cambiar">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button layoutX="435.0" layoutY="15.0" mnemonicParsing="false" onAction="#btDelete" text="Eliminar">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </children>

@@ -1,7 +1,6 @@
 package ORION.LoginScreen;
 
 import ORION.Main;
-import ORION.Others.User;
 import ORION.models.Conections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,7 +11,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import java.io.IOException;
-import java.util.LinkedList;
 
 public class Register{
 
@@ -20,11 +18,6 @@ public class Register{
     @FXML CheckBox checkPrivacy;
 
     static Login login = new Login();
-
-    //#region Descontinuado
-    static LinkedList<User> listUser= new LinkedList<>();
-    User user = new User("","", login.getPassWord(), login.getUserName(),0,0,0,null);
-    //#endregion
 
     Conections conection;
     @FXML protected void initialize(){
@@ -42,7 +35,7 @@ public class Register{
             String Pso=txPeso.getText();
             String Alt=txAltura.getText();
             String Curp=txCURP.getText();
-            conection.insmodel("UPDATE pacient SET name='"+Nm+"' ,lastname= '"+Ap+"' ,lastname2= '"+Ap+"' ,age= '"+Ag+"' ,CURP= '"+Curp+"' ,weight= '"+Pso+"', height= '"+Alt+"' WHERE idPacient = '"+count+"'");
+            conection.insmodel("UPDATE pacient SET name='"+Nm+"' ,lastname= '"+Ap+"' ,lastname2= '"+Am+"' ,age= '"+Ag+"' ,CURP= '"+Curp+"' ,weight= '"+Pso+"', height= '"+Alt+"' WHERE idPacient = '"+count+"'");
 
             txName.setText("");
             txAge.setText("");
@@ -81,6 +74,4 @@ public class Register{
             alert.show();
         }
     }
-
-    public static LinkedList<User> getListUser() { return listUser; }
 }

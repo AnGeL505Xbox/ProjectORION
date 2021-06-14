@@ -34,6 +34,5 @@ public class Conections {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
     }
 }

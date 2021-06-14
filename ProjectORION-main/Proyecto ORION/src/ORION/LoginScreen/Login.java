@@ -169,8 +169,6 @@ public class Login{
 
     //#endregion
     //#region Getters & Setters
-    public String getUserName() { return userReg; }
-    public String getPassWord() { return passReg; }
     public int getCount() { return regCount; }
     public int getLogCount() { return logCount; }
     //#endregion
